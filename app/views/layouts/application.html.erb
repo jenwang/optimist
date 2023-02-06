@@ -12,22 +12,26 @@
   	</head>
 
   	<body>
-		<nav class="navbar bg-navbar">
+		<nav class="navbar bg-navbar mb-3">
 			<div class="container-fluid">
 				<div class="col-6">
-		    	<%= link_to "Home", root_path, class: "navbar-brand" %>
+		    	<%= link_to "Optimist", root_path, class: "navbar-brand" %>
 		    	</div>
 
+		    	<% if !user_signed_in? %>
 		    	<div class="col-6 text-end nav-buttons">
 		    		<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-navbar-signup" %>
 		    		<%= link_to "Log In", new_user_session_path, class: "btn btn-navbar" %>
 		    	</div>
+		    	<% else %>
+		    	My Account
+		    	<% end %>
 			</div>
 		</nav>
 	
 		<div class="container-fluid">
-		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
+		<% if !notice.nil? %><p class="alert alert-info"><%= notice %></p><% end %>
+		<% if !alert.nil? %><p class="alert alert-warning"><%= alert %></p><% end %>
 		<%= yield %>
 		</div>
   	</body>
