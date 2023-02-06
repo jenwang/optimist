@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Optimist</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+	<head>
+		<title>Optimist</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+		<%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+		<%= javascript_importmap_tags %>
+  	</head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
-  </body>
+  	<body>
+		<nav class="navbar bg-navbar">
+			<div class="container-fluid">
+				<div class="col-6">
+		    	<%= link_to "Home", root_path, class: "navbar-brand" %>
+		    	</div>
+
+		    	<div class="col-6 text-end nav-buttons">
+		    		<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-navbar-signup" %>
+		    		<%= link_to "Log In", new_user_session_path, class: "btn btn-navbar" %>
+		    	</div>
+			</div>
+		</nav>
+	
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
+		<%= yield %>
+  	</body>
 </html>

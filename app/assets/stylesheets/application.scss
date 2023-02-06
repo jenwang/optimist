@@ -15,3 +15,10 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 // See list at: https://github.com/twbs/bootstrap-rubygem/blob/main/assets/stylesheets/bootstrap/_variables.scss
 @import "bootstrap";
+
+.bg-navbar {background-color: $yellow-500;}
+.btn-navbar {background-color: $orange-500; color: $white;}
+.btn-navbar:hover {background-color: $white; color: $orange-500; border: 1px solid $orange-500}
+.btn-navbar-signup {background-color: $cyan-500; color: $white;}
+.btn-navbar-signup:hover {background-color: $white; color: $cyan-500; border: 1px solid $cyan-500}
+
