@@ -22,3 +22,7 @@
 .btn-navbar-signup {background-color: $cyan-500; color: $white;}
 .btn-navbar-signup:hover {background-color: $white; color: $cyan-500; border: 1px solid $cyan-500}
 
+ul.dropdown-menu {background-color: $yellow-200;}
+.dropdown-menu-right {right: 0px; left: auto !important}
+a.dropdown-item:hover {background-color: $yellow-100;}
+

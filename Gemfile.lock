@@ -245,7 +245,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  bootstrap (~> 5.2.2)
+  bootstrap (~> 5.2.3)
   capybara
   debug
   devise
